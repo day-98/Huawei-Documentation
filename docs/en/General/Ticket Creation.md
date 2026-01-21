@@ -1,20 +1,23 @@
 
 ### Tasks
 
-1. Send an emailt to [Eusupport@huawei.com](mailto:Eusupport@huawei.com) with the following structure (example):
+1. Send an email to [Eusupport@huawei.com](mailto:Eusupport@huawei.com) with the following structure (example):
 
 ```
-Hello Support,
-Could you please open a CS ticket for [Company Name]
+Hello,
+ 
+Please help me to open a ticket with the following information:
 
-Device(s)
-    - OceanStor [Model]. ESN: [Cabinet Serial Number]
-    - OceanStor [Model]. ESN: [Cabinet Serial Number]
+Customer : <Customer Name>
+Country : Spain
+Product Name :<Product Name>
+ESN:<Product ESN>
+Incident Time : <Incident Time Date and Hour>
+Problem description: Describe as much as possible the issue.
+Providing logs, screenshoot, configuration files, etc. 
 
-Description:
-We need to replace a faulty disk ...
+Thankss!
 
-Best regards
 ```
 
 Follow the support instructions (TAC) to solve the issue.

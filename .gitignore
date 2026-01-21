@@ -6,6 +6,7 @@ pdf-regen.bat
 *.swp
 .DS_Store
 Thumbs.db
+.venv
 
 .local/
 

@@ -1,6 +1,6 @@
-site_name: "Huawei Storage Documentation"
-site_url: "https://javimcasas.github.io/OceanStor-Documentation/"
-site_description: "Documentación técnica para sistemas OceanStor"
+site_name: "Huawei Datacom Documentation"
+site_url: "https://day-98.github.io/Huawei-Documentation/"
+site_description: "Documentación técnica sobre Datacom"
 use_directory_urls: false
 
 theme:
@@ -51,7 +51,7 @@ extra_css:
 
 plugins:
   - search:
-      lang: 
+      lang:
         - en
         - es
   - i18n:
@@ -82,6 +82,26 @@ nav:
 
   - General Information:
     - 'General/Ticket Creation.md'
+    - 'General/Obtain ESN.md'
+    - 'General/Commun Links.md'
+
+  - EASYSUITE:
+    - 'Typical Doubts/EasySuite Typical Doubts.md'
+
+  - NCE CAMPUS:
+    - 'General/Ticket Creation.md'
+
+  - eSIGHT:
+    - 'General/Ticket Creation.md'
+
+  - NCE FABRIC:
+    - 'General/Ticket Creation.md'
+
+  - NCE FABRIC INSIGHT:
+    - 'General/Ticket Creation.md'
+  
+  - WAC:
+    - 'Switches/SNMPv3 Configuration.md'
 
   - OceanStor Dorado:
     - General Configuration:
@@ -143,3 +163,4 @@ nav:
     - 'Switches/VLAN Assignation.md'
     - 'Switches/M-LAG Configuration.md'
     - 'Switches/Uplink Configuration.md'
+    - 'Switches/SNMPv3 Configuration.md'
