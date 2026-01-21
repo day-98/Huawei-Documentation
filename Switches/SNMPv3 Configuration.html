@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -10,35 +10,33 @@
       
       
       
-        <link rel="canonical" href="https://day-98.github.io/Huawei-Documentation/es/General/Ticket%20Creation.html">
+        <link rel="canonical" href="https://day-98.github.io/Huawei-Documentation/Switches/SNMPv3%20Configuration.html">
       
       
-        <link rel="prev" href="Ticket%20Creation.html">
+        <link rel="prev" href="Uplink%20Configuration.html">
       
-      
-        <link rel="next" href="../Switches/SNMPv3%20Configuration.html">
       
       
         
-          <link rel="alternate" href="../../General/Ticket%20Creation.html" hreflang="en">
+          <link rel="alternate" href="SNMPv3%20Configuration.html" hreflang="en">
         
-          <link rel="alternate" href="Ticket%20Creation.html" hreflang="es">
+          <link rel="alternate" href="../es/Switches/SNMPv3%20Configuration.html" hreflang="es">
         
       
       
-      <link rel="icon" href="../../Huawei_Standard_logo.svg">
+      <link rel="icon" href="../Huawei_Standard_logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Ticket Creation - Huawei Datacom Documentation</title>
+        <title>SNMPv3 Configuration - Huawei Datacom Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -57,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -84,8 +82,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#tareas" class="md-skip">
-          Saltar a contenido
+        <a href="#objetive" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -99,7 +97,7 @@
   
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="Huawei Datacom Documentation" class="md-header__button md-logo" aria-label="Huawei Datacom Documentation" data-md-component="logo">
       
   
@@ -120,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ticket Creation
+              SNMPv3 Configuration
             
           </span>
         </div>
@@ -160,20 +158,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../General/Ticket%20Creation.html" hreflang="en" class="md-select__link">
+            <a href="SNMPv3%20Configuration.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="Ticket%20Creation.html" hreflang="es" class="md-select__link">
+            <a href="../es/Switches/SNMPv3%20Configuration.html" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
@@ -194,21 +192,21 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -221,7 +219,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -236,7 +234,7 @@
   
     
       
-<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -267,7 +265,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Ticket%20Creation.html" class="md-tabs__link">
+        <a href="../General/Ticket%20Creation.html" class="md-tabs__link">
           
   
   
@@ -311,7 +309,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Ticket%20Creation.html" class="md-tabs__link">
+        <a href="../General/Ticket%20Creation.html" class="md-tabs__link">
           
   
   
@@ -333,7 +331,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Ticket%20Creation.html" class="md-tabs__link">
+        <a href="../General/Ticket%20Creation.html" class="md-tabs__link">
           
   
   
@@ -355,7 +353,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Ticket%20Creation.html" class="md-tabs__link">
+        <a href="../General/Ticket%20Creation.html" class="md-tabs__link">
           
   
   
@@ -373,13 +371,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="Ticket%20Creation.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../General/Ticket%20Creation.html" class="md-tabs__link">
           
   
   
@@ -401,7 +397,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Switches/SNMPv3%20Configuration.html" class="md-tabs__link">
+        <a href="SNMPv3%20Configuration.html" class="md-tabs__link">
           
   
   
@@ -461,11 +457,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../Switches/Initialization.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="Initialization.html" class="md-tabs__link">
           
   
   
@@ -505,7 +503,7 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="Huawei Datacom Documentation" class="md-nav__button md-logo" aria-label="Huawei Datacom Documentation" data-md-component="logo">
       
@@ -609,35 +607,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ticket Creation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Ticket%20Creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../General/Ticket%20Creation.html" class="md-nav__link">
         
   
   
@@ -653,35 +626,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tareas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -694,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Obtain%20ESN.html" class="md-nav__link">
+      <a href="../General/Obtain%20ESN.html" class="md-nav__link">
         
   
   
@@ -722,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Commun%20Links.html" class="md-nav__link">
+      <a href="../General/Commun%20Links.html" class="md-nav__link">
         
   
   
@@ -901,35 +845,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ticket Creation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Ticket%20Creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../General/Ticket%20Creation.html" class="md-nav__link">
         
   
   
@@ -945,35 +864,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tareas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1046,35 +936,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ticket Creation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Ticket%20Creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../General/Ticket%20Creation.html" class="md-nav__link">
         
   
   
@@ -1090,35 +955,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tareas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1191,35 +1027,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ticket Creation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Ticket%20Creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../General/Ticket%20Creation.html" class="md-nav__link">
         
   
   
@@ -1235,35 +1046,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tareas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1280,10 +1062,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1293,22 +1073,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1326,7 +1103,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1341,35 +1118,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ticket Creation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Ticket%20Creation.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../General/Ticket%20Creation.html" class="md-nav__link">
         
   
   
@@ -1385,35 +1137,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tareas
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1486,10 +1209,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Switches/SNMPv3%20Configuration.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMPv3 Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="SNMPv3%20Configuration.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1505,6 +1253,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check configurations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3506,8 +3305,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -3529,19 +3330,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -3559,7 +3363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3577,7 +3381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Switches/Initialization.html" class="md-nav__link">
+      <a href="Initialization.html" class="md-nav__link">
         
   
   
@@ -3605,7 +3409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Switches/SSH%20User.html" class="md-nav__link">
+      <a href="SSH%20User.html" class="md-nav__link">
         
   
   
@@ -3633,7 +3437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Switches/Management%20Port%20Configuration.html" class="md-nav__link">
+      <a href="Management%20Port%20Configuration.html" class="md-nav__link">
         
   
   
@@ -3661,7 +3465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Switches/VLAN%20Assignation.html" class="md-nav__link">
+      <a href="VLAN%20Assignation.html" class="md-nav__link">
         
   
   
@@ -3689,7 +3493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Switches/M-LAG%20Configuration.html" class="md-nav__link">
+      <a href="M-LAG%20Configuration.html" class="md-nav__link">
         
   
   
@@ -3717,7 +3521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Switches/Uplink%20Configuration.html" class="md-nav__link">
+      <a href="Uplink%20Configuration.html" class="md-nav__link">
         
   
   
@@ -3742,10 +3546,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Switches/SNMPv3%20Configuration.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMPv3 Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="SNMPv3%20Configuration.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3761,6 +3590,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check configurations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3786,22 +3666,44 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
+  <a href="#objetive" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tareas
+        Objetive
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tasks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check configurations
       
     </span>
   </a>
@@ -3825,25 +3727,48 @@
 
 
 
-  <h1>Ticket Creation</h1>
+  <h1>SNMPv3 Configuration</h1>
 
-<h3 id="tareas">Tareas<a class="headerlink" href="#tareas" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Envíe un correo electrónico a <a href="mailto:Eusupport@huawei.com">Eusupport@huawei.com</a> con la siguiente estructura (ejemplo):</li>
-</ol>
-<div class="highlight"><pre><span></span><code>Hello Support,
-Could you please open a CS ticket for [Company Name]
-
-Device(s)
-    - OceanStor [Model]. ESN: [Cabinet Serial Number]
-    - OceanStor [Model]. ESN: [Cabinet Serial Number]
-
-Description:
-We need to replace a faulty disk ...
-
-Best regards
-</code></pre></div>
-<p>Siga las instrucciones del soporte (TAC) para resolver el problema</p>
+<h3 id="objetive"><strong>Objetive</strong><a class="headerlink" href="#objetive" title="Permanent link">&para;</a></h3>
+<p>Configure the SNMP agent with authentication and encryption (v3), read/write communities (v2c), and a trap destination host.</p>
+<h3 id="tasks"><strong>Tasks</strong><a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
+<p><strong>Log in to the switch</strong></p>
+<p><strong>Enter System Mode</strong></p>
+<p><code>system-view</code></p>
+<p><strong>Create SNMPv3 User Groups</strong></p>
+<p><code>snmp-agent group v3 &lt;group&gt; noauth</code></p>
+<p><strong>Configure SNMP MIB Views</strong></p>
+<p><code>snmp-agent group v3 &lt;group&gt; privacy read-view iso-view write-view iso-view notify-view iso-view</code></p>
+<p><code>snmp-agent mib-view private include mgmt</code></p>
+<p><code>snmp-agent mib-view iso-view include iso</code></p>
+<p><code>snmp-agent mib-view public_view include internet</code></p>
+<p><strong>Configure TRAP destination</strong></p>
+<p><code>snmp-agent target-host trap-hostname eSight address &lt;IP&gt; udp-port 162 trap-paramsname &lt;user&gt;</code></p>
+<p><strong>Configure Securityname</strong></p>
+<p><code>snmp-agent target-host trap-paramsname &lt;user&gt; v3 securityname &lt;pass&gt; noauthnopriv</code></p>
+<p><strong>Configure SNMPv3 User</strong></p>
+<p><code>snmp-agent usm-user version v3 &lt;user&gt;</code></p>
+<p><strong>Assign user to group</strong></p>
+<p><code>snmp-agent usm-user version v3 &lt;user&gt; group &lt;group&gt;</code></p>
+<p><strong>Configure authentication to user</strong></p>
+<pre><code>`snmp-agent usm-user version v3 &lt;user&gt; authentication-mode sha2-256 &lt;passw&gt;`
+</code></pre>
+<p><strong>Configure encryption to user</strong></p>
+<pre><code>`snmp-agent usm-user version v3 &lt;user&gt; privacy-mode aes128 &lt;passw&gt;`
+</code></pre>
+<p><strong>Configure Source Interface</strong></p>
+<pre><code>`snmp-agent protocol source-interface all`
+`snmp-agent protocol source-interface &lt;interface&gt;`
+</code></pre>
+<p><strong>Enable Trap functionality</strong></p>
+<pre><code>`snmp-agent trap enable`
+</code></pre>
+<h3 id="check-configurations">Check configurations<a class="headerlink" href="#check-configurations" title="Permanent link">&para;</a></h3>
+<p><code>display snmp-agent community</code></p>
+<p><code>display snmp-agent group</code></p>
+<p><code>display snmp-agent usm-user</code></p>
+<p><code>display snmp-agent target-host</code></p>
+<p><code>display snmp-agent mib-view</code></p>
 
 
 
@@ -3869,7 +3794,7 @@ Best regards
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Volver al principio
+  Back to top
 </button>
         
       </main>
@@ -3901,10 +3826,10 @@ Best regards
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.instant", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
