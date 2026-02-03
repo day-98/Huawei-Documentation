@@ -89,7 +89,7 @@ nav:
     - 'Typical Doubts/EasySuite Typical Doubts.md'
 
   - NCE CAMPUS:
-    - 'General/Ticket Creation.md'
+    - 'NCE Campus/NCE Campus Typical Doubts.md'
 
   - eSIGHT:
     - 'General/Ticket Creation.md'
@@ -102,59 +102,6 @@ nav:
   
   - WAC:
     - 'Switches/SNMPv3 Configuration.md'
-
-  - OceanStor Dorado:
-    - General Configuration:
-      - Software Management:
-        - 'Storage Cabinets Configuration/Software Download.md'
-      - Multi Tenant:
-        - 'Storage Cabinets Configuration/vStore Creation.md'
-      - Management Tools:
-        - 'Storage Cabinets Configuration/DME IQ Configuration.md'
-        - 'Storage Cabinets Configuration/Device Manager Demo.md'
-      - Maintenance:
-        - 'Storage Cabinets Configuration/License Update.md'
-        - 'Storage Cabinets Configuration/Alarm Masking.md'
-      - Initial Setup:
-        - 'Storage Cabinets Configuration/Machines Installation.md'
-        - 'Storage Cabinets Configuration/Modify Management IPs.md'
-
-    - NAS Configuration:
-      - 'Storage Cabinets Configuration/Logical Ports Creation.md'
-      - 'Storage Cabinets Configuration/File System Creation & Access.md'
-
-    - High Availability:
-      - General:
-        - 'HyperMetro Configuration/Remote Device Connection.md'
-      - Remote Replication:
-        - 'HyperMetro Configuration/Remote Replication Creation.md'
-      - HyperMetro:
-        - 'HyperMetro Configuration/HyperMetro Devices Upgrade.md'
-        - 'HyperMetro Configuration/Quorum Server Update.md'
-
-    - LLD Designer:
-      - 'LLD Designer/Introduction.md'
-      - 'LLD Designer/Storage Cabinet Configuration.md'
-      - 'LLD Designer/Rack Placement of Cabinets.md'
-      - 'LLD Designer/Switching & Networking.md'
-      - 'LLD Designer/Management Switching Networking.md'
-  
-    - Maintenance & Monitoring:
-      - Upgrade:
-        - 'Storage Cabinets Configuration/Disk Firmware Upgrade.md'
-        - 'Storage Cabinets Configuration/Main Version Upgrade.md'
-        - 'Storage Cabinets Configuration/Patch Upgrade.md'
-      - Log Collection:
-        - 'Health Checks/Health Checks.md'
-        - 'Health Checks/Pre Upgrade Evaluation.md'
-        - 'Health Checks/Uploading Health Check Files.md'
-        - 'Storage Cabinets Configuration/Dashboard Creation.md'
-  
-    - Troubleshooting:
-      - 'Troubleshooting/Admin User Password Restoration.md'
-      - 'Troubleshooting/File System.md'
-      - 'Troubleshooting/LDAP.md'
-      - 'Troubleshooting/Updating Error Ignoring.md'
 
   - Switches:
     - 'Switches/Initialization.md'
