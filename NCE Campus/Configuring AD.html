@@ -1,0 +1,2300 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación técnica sobre Datacom">
+      
+      
+      
+        <link rel="canonical" href="https://day-98.github.io/Huawei-Documentation/NCE%20Campus/Configuring%20AD.html">
+      
+      
+        <link rel="prev" href="Export_Device_List.html">
+      
+      
+        <link rel="next" href="Configuring%20NCE%20as%20Radius%20Server.html">
+      
+      
+        
+          <link rel="alternate" href="Configuring%20AD.html" hreflang="en">
+        
+          <link rel="alternate" href="../es/NCE%20Campus/Configuring%20AD.html" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../Huawei_Standard_logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Configuring AD - Huawei Datacom Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configurar-interconexion-de-ad-con-nce-campus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Huawei Datacom Documentation" class="md-header__button md-logo" aria-label="Huawei Datacom Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Huawei Datacom Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuring AD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="Configuring%20AD.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../es/NCE%20Campus/Configuring%20AD.html" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../General/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  General Information
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Typical%20Doubts/EasySuite%20Typical%20Doubts.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EASYSUITE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="NCE%20Campus%20Typical%20Doubts.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NCE CAMPUS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../eSight/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  eSIGHT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../NCE_Fabric/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NCE FABRIC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../NCE_Fabric_Insight/index.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NCE FABRIC INSIGHT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../WACs/SNMPv3%20Configuration.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  WAC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Switches/Initialization.html" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Switches
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Huawei Datacom Documentation" class="md-nav__button md-logo" aria-label="Huawei Datacom Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Huawei Datacom Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../General/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Information
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    General Information
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../General/Ticket%20Creation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ticket Creation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../General/Obtain%20ESN.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obtain ESN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../General/Commun%20Links.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commun Links
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../General/RFC_Upgrade_Process.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RFC Upgrade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EASYSUITE
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EASYSUITE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Typical%20Doubts/EasySuite%20Typical%20Doubts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EasySuite Typical Doubts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCE CAMPUS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NCE CAMPUS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NCE%20Campus%20Typical%20Doubts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCE Campus Typical Doubts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Health_Check.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Health Check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Export_Device_List.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export Device List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring AD
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Configuring%20AD.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring AD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurar-interconexion-de-ad-con-nce-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar interconexión de AD con NCE Campus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONTEXTO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROCEDIMIENTO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROCEDIMIENTO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-agregar-el-controlador-a-un-dominio-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1: Agregar el Controlador a un Dominio AD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-configurar-la-resolucion-de-nombres-dns-en-el-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2: Configurar la resolución de nombres DNS en el servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-anadir-el-active-directory-ad-en-imaster-nce-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3: Añadir el Active Directory (AD) en iMaster NCE-Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-configurar-la-sincronizacion-con-active-directory-ad-en-imaster-nce-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4: Configurar la sincronización con Active Directory (AD) en iMaster NCE-Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes-de-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FUENTES DE CONSULTA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Configuring%20NCE%20as%20Radius%20Server.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring NCE as Radius Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../eSight/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    eSIGHT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    eSIGHT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../NCE_Fabric/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCE FABRIC
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NCE FABRIC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../NCE_Fabric_Insight/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCE FABRIC INSIGHT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NCE FABRIC INSIGHT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WAC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WAC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WACs/SNMPv3%20Configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMPv3 Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switches
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Switches
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/Initialization.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initialization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/SSH%20User.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH User
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/Management%20Port%20Configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Management Port Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/VLAN%20Assignation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VLAN Assignation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/M-LAG%20Configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M LAG Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/Uplink%20Configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uplink Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switches/SNMPv3%20Configuration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SNMPv3 Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurar-interconexion-de-ad-con-nce-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar interconexión de AD con NCE Campus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CONTEXTO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROCEDIMIENTO
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROCEDIMIENTO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-agregar-el-controlador-a-un-dominio-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1: Agregar el Controlador a un Dominio AD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-configurar-la-resolucion-de-nombres-dns-en-el-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2: Configurar la resolución de nombres DNS en el servidor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-anadir-el-active-directory-ad-en-imaster-nce-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3: Añadir el Active Directory (AD) en iMaster NCE-Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-configurar-la-sincronizacion-con-active-directory-ad-en-imaster-nce-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4: Configurar la sincronización con Active Directory (AD) en iMaster NCE-Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes-de-consulta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FUENTES DE CONSULTA
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Configuring AD</h1>
+
+<h3 id="configurar-interconexion-de-ad-con-nce-campus">Configurar interconexión de AD con NCE Campus<a class="headerlink" href="#configurar-interconexion-de-ad-con-nce-campus" title="Permanent link">&para;</a></h3>
+<h2 id="contexto"><strong>CONTEXTO</strong><a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
+<p>El sistema iMaster NCE-Campus puede conectarse e intercambiar información con servidores de Active Directory (AD), los cuales suelen utilizarse en empresas para gestionar usuarios y contraseñas de forma centralizada.</p>
+<p><strong>REQUISITOS</strong></p>
+<p>Dependiendo del modo de sincronización que elija, el sistema funcionará de la siguiente manera:</p>
+<ul>
+<li><strong>Si selecciona Unsynchronized account/organization structure:</strong> No hay límite en la cantidad de unidades organizativas (OU), grupos o usuarios que puede tener en su servidor AD.</li>
+<li><strong>Si selecciona cualquier otro modo de sincronización (diferente al anterior):</strong> Al importar (sincronizar) los datos desde su servidor AD al sistema iMaster NCE-Campus, se aplicarán los siguientes límites:<ul>
+<li>Máximo 50,000 unidades organizativas (OU) o grupos por empresa (tenant).</li>
+<li>Cada OU o grupo puede tener hasta 20 niveles de subcarpetas (anidamiento).</li>
+<li>Cada OU o grupo puede contener hasta 1,000 sub-OU o subgrupos.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Grupo de Usuarios Creado:</strong> Asegúrese de haber creado un grupo de usuarios. Si necesita ayuda, consulte la sección "Cómo configurar un grupo de usuarios".[Link] (https://support.huawei.com/hedex/hdx.do?docid=EDOC1100331202&amp;id=EN-US_TOPIC_0000001829897477)</p>
+<p><strong>Datos del Servidor AD:</strong> Tenga a mano los parámetros de configuración de su servidor AD (como dirección del servidor, nombre de dominio, credenciales, etc.), ya que los necesitará durante el proceso.</p>
+<h2 id="procedimiento"><strong>PROCEDIMIENTO</strong><a class="headerlink" href="#procedimiento" title="Permanent link">&para;</a></h2>
+<h3 id="paso-1-agregar-el-controlador-a-un-dominio-ad"><strong>Paso 1: Agregar el Controlador a un Dominio AD</strong><a class="headerlink" href="#paso-1-agregar-el-controlador-a-un-dominio-ad" title="Permanent link">&para;</a></h3>
+<p>Nota importante: </p>
+<p>Solo necesitará configurar un dominio AD si su tenant tiene habilitada la autenticación MSCHAPv2. A continuación, le explicamos cómo activar MSCHAPv2 en el tenant</p>
+<ol>
+<li>
+<p>Acceda al sistema: Inicie sesión en iMaster NCE-Campus como administrador (admin)</p>
+</li>
+<li>
+<p>Navegue a:  Admission Management &gt; Admission Policy &gt; Authentication and Authorization &gt; Authentication Rule</p>
+</li>
+<li>
+<p>En la página Authentication Rule establezca el modo de autenticación: En la opción "Authentication mode", seleccione "User access authentication" </p>
+</li>
+</ol>
+<p><img alt="auth" src="../Images/auth.PNG" /></p>
+<p>Seleccione el protocolo de autenticación EAP-PEAP-MSCHAPv2. Este protocolo funciona tanto para cuentas locales como para cuentas sincronizadas desde servidores AD y LDAP.</p>
+<p><img alt="auth2" src="../Images/auth2.PNG" /></p>
+<h3 id="paso-2-configurar-la-resolucion-de-nombres-dns-en-el-servidor"><strong>Paso 2: Configurar la resolución de nombres DNS en el servidor</strong><a class="headerlink" href="#paso-2-configurar-la-resolucion-de-nombres-dns-en-el-servidor" title="Permanent link">&para;</a></h3>
+<p>Este paso es necesario para que el sistema pueda encontrar y comunicarse con su servidor de Active Directory usando su nombre de dominio.</p>
+<ol>
+<li>
+<p><strong>Acceda al servidor:</strong></p>
+<ul>
+<li>Conéctese SSH al servidor del iMaster NCE-Campus, en caso de ser un clúster, conectrase a todos los nodos, incluyendo DR.</li>
+<li>Inicie sesión con el usuario <strong><code>sopuser</code></strong>.</li>
+<li>Una vez dentro, cambie al usuario administrador <strong><code>root</code></strong> ( usando el comando <code>su - root</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Edite el archivo de configuración DNS:</strong></p>
+<ul>
+<li>
+<p>Abra el archivo de configuración de DNS con un editor de texto. Por ejemplo, puede usar el comando:</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/resolv.conf
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Agregue los servidores DNS:</strong></p>
+<ul>
+<li>
+<p>Dentro del archivo, agregue una línea por cada servidor DNS que quiera configurar, usando el formato <code>nameserver [dirección_ip]</code>.</p>
+<p><strong>Ejemplo:</strong> Si su servidor DNS tiene la dirección IP <strong>10.10.10.10</strong>, debe agregar la siguiente línea:</p>
+<div class="highlight"><pre><span></span><code>nameserver 10.10.10.10
+</code></pre></div>
+</li>
+<li>
+<p><strong>Importante:</strong> Puede configurar hasta 3 servidores DNS. Si necesita más de uno, agregue una línea por cada uno.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ajuste los tiempos de espera (si tiene múltiples DNS):</strong></p>
+<ul>
+<li>Si configuró más de un servidor DNS, es recomendable agregar parámetros de timeout para que el sistema no se quede esperando demasiado si un servidor no responde.</li>
+<li>
+<p>Para ello, agregue la siguiente línea al archivo <code>/etc/resolv.conf</code>:</p>
+<div class="highlight"><pre><span></span><code>options timeout:1 attempts:1 rotate
+</code></pre></div>
+<p><em>(Esto significa: espere 1 segundo por respuesta, haga 1 intento por servidor y alterne el orden de los servidores).</em></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Guarde y cierre:</strong></p>
+<ul>
+<li>Guarde los cambios realizados en el archivo y salga del editor.</li>
+<li>En el editor <code>vi</code>, esto suele hacerse presionando <code>Esc</code>, luego escribiendo <code>:wq</code> y presionando <code>Enter</code>.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Resumen:</strong>
+Al finalizar, su archivo <code>/etc/resolv.conf</code> debería verse similar a esto si tiene dos servidores DNS:
+<div class="highlight"><pre><span></span><code>nameserver IP1
+nameserver IP2
+options timeout:1 attempts:1 rotate
+</code></pre></div></p>
+<p>Después de configurar los servidores DNS, es fundamental verificar que todo esté funcionando bien. Siga estos pasos para asegurarse de que el sistema puede encontrar su controlador de dominio (DC) de Active Directory.</p>
+<p>Ejecute el comando de verificación en cada uno de los servidores donde está instalado iMaster NCE-Campus:</p>
+<p>nslookup -type=srv _ldap._tcp.dc._msdcs.[nombre_del_dominio_AD]</p>
+<p>Ejemplo práctico:
+Si su dominio de Active Directory se llama empresa.local, el comando sería:</p>
+<p>nslookup -type=srv _ldap._tcp.dc._msdcs.empresa.local</p>
+<p>Resultado correcto: El comando debe devolver una o más direcciones IP correspondientes a sus controladores de dominio. No se preocupe si aparecen controladores de dominio de otros sitios o ubicaciones; lo importante es que el servidor DNS esté respondiendo a la consulta.</p>
+<p>Resultado incorrecto: Si el comando no devuelve ninguna IP o muestra un error, significa que la configuración DNS no es correcta o que el servidor DNS no tiene la información necesaria sobre su dominio AD.</p>
+<h3 id="paso-3-anadir-el-active-directory-ad-en-imaster-nce-campus"><strong>Paso 3: Añadir el Active Directory (AD) en iMaster NCE-Campus</strong><a class="headerlink" href="#paso-3-anadir-el-active-directory-ad-en-imaster-nce-campus" title="Permanent link">&para;</a></h3>
+<p>Ahora procederemos a conectar formalmente su sistema iMaster NCE-Campus con su servidor de Active Directory. Siga estos pasos en orden:</p>
+<p><strong>Acceder a la configuración de AD</strong></p>
+<ol>
+<li>
+<p>Inicie sesión en iMaster NCE-Campus como administrador</p>
+</li>
+<li>
+<p>En el menú principal, navegue a:</p>
+<p><code>System &gt; System Management &gt; Third-Party Service,</code></p>
+</li>
+<li>
+<p>En el panel izquierdo, seleccione AD Domain Configuration</p>
+</li>
+</ol>
+<p><strong>Agregar el dominio AD</strong></p>
+<ol>
+<li>
+<p>Haga clic en Add para crear un nuevo AD.</p>
+</li>
+<li>
+<p>Complete la siguiente información, según se muestra a modo de ejemplo en la imagen:</p>
+<ul>
+<li><strong>Nombre del dominio AD:</strong> Escriba el nombre de su dominio (ej: <code>empresa.local</code>).</li>
+<li><strong>Usuario y contraseña:</strong> Ingrese las credenciales de una cuenta con permisos para unir equipos al dominio.</li>
+<li><strong>Configuración avanzada:</strong> Si es necesario, complete opciones adicionales como NetBIOS (obligatorio si el nombre NetBIOS es diferente al nombre del dominio).</li>
+</ul>
+</li>
+</ol>
+<p><img alt="auth4" src="../Images/auth4.PNG" /></p>
+<p>Haga clic en <strong>"Verificar Resolución de Nombres de Dominio"</strong> para comprobar que el sistema puede encontrar su dominio AD.</p>
+<p><img alt="auth6" src="../Images/auth6.PNG" /></p>
+<p>Si la verificación es exitosa, haga clic en <strong>"Agregar al Dominio"</strong>.</p>
+<p><img alt="auth5" src="../Images/auth5.PNG" /></p>
+<p><strong>Verificar el estado de cada servidor (nodo)</strong></p>
+<p>Una vez agregado el dominio, puede verificar el estado de confianza con cada servidor:</p>
+<p><img alt="auth10" src="../Images/auth10.PNG" /></p>
+<p><img alt="auth11" src="../Images/auth11.PNG" /></p>
+<p>Haga clic en el icono <strong><code>&gt;</code></strong> junto al nombre del dominio AD para ver la información de cada nodo.</p>
+<p><strong>Indicadores de estado:</strong></p>
+<p>🟢 <strong>Verde:</strong> Normal (funciona correctamente)</p>
+<p>🟡 <strong>Amarillo:</strong> Advertencia (funciona con limitaciones)</p>
+<p>🔴 <strong>Rojo:</strong> Anormal (no funciona, requiere solución)</p>
+<p>⚪ <strong>Gris:</strong> No ejecutado</p>
+<p>🔄 <strong>Círculo giratorio:</strong> En proceso</p>
+<p><strong>Si algún nodo muestra estado rojo</strong>, solucione el problema siguiendo las indicaciones que aparecen en pantalla. El caso más típico de fallo, se debe a que el NCE no está bien agregado dentro del servidor de AD. </p>
+<p><strong>Si el estado es amarillo</strong> y el motivo es "cuenta de detección no configurada":</p>
+<ol>
+<li>Vaya a la pestaña <strong>"Lista de Verificación"</strong>.</li>
+<li>Haga clic en <strong>"Configurar Cuenta de Detección"</strong>.</li>
+<li>Ingrese una cuenta válida del dominio AD y haga clic en <strong>"Aceptar"</strong>.</li>
+</ol>
+<p><img alt="auth8" src="../Images/auth8.PNG" /></p>
+<p>Vuelva a ejecutar la verificación, en Refresh.</p>
+<h3 id="paso-4-configurar-la-sincronizacion-con-active-directory-ad-en-imaster-nce-campus"><strong>Paso 4: Configurar la sincronización con Active Directory (AD) en iMaster NCE-Campus</strong><a class="headerlink" href="#paso-4-configurar-la-sincronizacion-con-active-directory-ad-en-imaster-nce-campus" title="Permanent link">&para;</a></h3>
+<p>Ahora configuraremos la conexión para que los usuarios y grupos de su Active Directory se sincronicen automáticamente con iMaster NCE-Campus. Siga estos pasos en orden:</p>
+<p><strong>Acceder a la configuración de sincronización</strong></p>
+<ol>
+<li>
+<p>Ingrese al NCE Campus con el usuario de tenant. En el menú principal, navegue a:</p>
+<p><code>Admission Management &gt; Admission Resource &gt; External Data Source &gt; AD/LDAP Synchronization</code></p>
+</li>
+</ol>
+<p><strong>Crear y configurar la conexión con el servidor AD</strong></p>
+<ol>
+<li>Haga clic en <strong>"Crear"</strong>.</li>
+<li>Complete los parámetros de conexión con su servidor AD. Necesitará tener a mano la dirección del servidor, puerto, etc. La siguiente figura se presenta a modo de ejemplo</li>
+</ol>
+<p><img alt="auth12" src="../Images/aut12.PNG" /></p>
+<p><strong>Verifique la conexión:</strong>
+   Pruebe la conexión al AD mediante Test Connection</p>
+<pre><code>*   Si aparece el icono **🟢** junto a la dirección del servidor, la conexión es exitosa.
+*   Si aparece el icono **🔴**, la conexión ha fallado. Revise los datos ingresados.
+</code></pre>
+<h2 id="_1"><img alt="auth13" src="../Images/auth13.PNG" /><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>Configuración</strong></p>
+<p>En los siguientes pasos se deberá configurar los parámetros del AD: </p>
+<p><img alt="auth14" src="../Images/auth14.PNG" /></p>
+<p><strong>Seleccionar el modo de sincronización</strong></p>
+<p>Elija el modo que mejor se adapte a su organización:</p>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Descripción</th>
+<th>Cuándo usarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modo 1 (Basado en OU)</strong></td>
+<td>Sincroniza usuarios según las Unidades Organizativas (OU) de su AD. La estructura de carpetas de su AD se replica en iMaster NCE-Campus.</td>
+<td>Cuando su AD está organizado por OU y quiere mantener esa misma estructura.</td>
+</tr>
+<tr>
+<td><strong>Modo 2 (Basado en grupos - OU como estructura)</strong></td>
+<td>Similar al modo 1, pero con enfoque en grupos.</td>
+<td>Cuando su organización usa grupos dentro de OU.</td>
+</tr>
+<tr>
+<td><strong>Modo 3 (Basado en grupos - grupos como estructura)</strong></td>
+<td>Sincroniza basándose en grupos de seguridad de AD.</td>
+<td>Cuando su AD está organizado principalmente por grupos.</td>
+</tr>
+<tr>
+<td><strong>Modo 5 (Estructura plana o personalizada)</strong></td>
+<td>Sincronización con estructura plana o con fórmulas personalizadas.</td>
+<td>Para casos avanzados que requieren personalización.</td>
+</tr>
+<tr>
+<td><strong>Por condiciones</strong></td>
+<td>Sincroniza solo los usuarios que cumplen condiciones específicas.</td>
+<td>Cuando necesita filtrar qué usuarios se sincronizan.</td>
+</tr>
+<tr>
+<td><strong>Sin sincronización</strong></td>
+<td>No sincroniza cuentas ni estructura organizativa.</td>
+<td>Cuando solo usa autenticación en tiempo real sin almacenar usuarios.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Para los modos que usan fórmulas:</strong>
+El sistema usa fórmulas como <code>SUBSTRING("dn",",", 1, "START")</code> para determinar a qué grupo pertenece un usuario. No se preocupe, los valores por defecto suelen funcionar correctamente.</p>
+<p><img alt="auth15" src="../Images/auth15.PNG" />
+<img alt="auth16" src="../Images/auth16.PNG" />
+<img alt="auth17" src="../Images/auth17.PNG" />
+<img alt="auth18" src="../Images/auth18.PNG" />
+<img alt="auth19" src="../Images/auth19.PNG" />
+<img alt="auth20" src="../Images/auth20.PNG" /></p>
+<hr />
+<p><strong>Configurar opciones adicionales</strong></p>
+<ul>
+<li><strong>Grupo de usuarios destino:</strong> Seleccione el grupo donde se ubicarán los usuarios sincronizados.</li>
+<li><strong>Modo de inicio de sesión disponible:</strong> Elija qué tipo de autenticación podrán usar estos usuarios:<ul>
+<li>Para autenticación por portal web: seleccione <strong>Portal</strong> o <strong>802.1X &amp; Portal 2.0</strong></li>
+<li>Para autenticación 802.1X: seleccione <strong>802.1X &amp; Portal 2.0</strong></li>
+<li>Para autenticación HWTACACS: seleccione <strong>HWTACACS</strong></li>
+</ul>
+</li>
+<li><strong>Usar solo certificados móviles:</strong> Active solo si usa autenticación por certificados 802.1X.</li>
+<li><strong>Bypass (modo de contingencia):</strong> Se recomienda activarlo. Permite que los usuarios accedan incluso si el servidor AD falla (solo en ciertos modos de autenticación).</li>
+</ul>
+<p><strong>Configurar atributos de usuarios y grupos</strong></p>
+<p>En la página <strong>"Configurar Atributos de Usuario y Grupo de Usuarios"</strong>:</p>
+<ol>
+<li><strong>Mantenga los valores por defecto</strong> en la mayoría de los casos. El sistema ya viene preconfigurado con los atributos estándar de Active Directory.</li>
+<li>Estos atributos definen cómo se mapea la información del AD (nombre, cuenta, email, teléfono, etc.) a los campos en iMaster NCE-Campus.</li>
+</ol>
+<p><img alt="auth21" src="../Images/auth21.PNG" /></p>
+<p><strong>Consideraciones importantes:</strong>
+*   Si elimina la configuración del servidor, <strong>todos los usuarios y grupos sincronizados se eliminarán</strong> del sistema. No cree usuarios manualmente dentro de grupos sincronizados para evitar borrados accidentales.
+*   Para autenticación, puede usar <code>sAMAccountName</code> o <code>userPrincipalName</code>. Tenga en cuenta que <code>sAMAccountName</code> solo muestra los primeros 20 caracteres en los registros.</p>
+<p><strong>Configuración de fecha de expiración:</strong>
+Si su AD tiene un campo personalizado para fecha de expiración de usuarios, puede configurarlo aquí. El sistema verificará esta fecha durante la autenticación.</p>
+<p><img alt="auth22" src="../Images/auth22.PNG" /></p>
+<p><strong>Configurar el alcance de la sincronización</strong></p>
+<p>Ahora definirá <strong>qué</strong> se sincroniza exactamente desde su AD:</p>
+<ol>
+<li>
+<p><strong>Configure el alcance para cuentas a sincronizar:</strong></p>
+<ul>
+<li><strong>Grupo de usuarios destino:</strong> Seleccione dónde se almacenarán los usuarios en iMaster NCE-Campus.</li>
+<li><strong>Directorio de OU/grupo origen:</strong> Seleccione las OU o grupos específicos de su AD que desea sincronizar.</li>
+</ul>
+<p><em>Si no encuentra OU o grupos, revise que el atributo "Nombre de grupo de usuarios" configurado en el paso 4.6 coincida con el de su servidor AD.</em></p>
+</li>
+<li>
+<p><strong>Si NO sincroniza cuentas</strong> (solo autenticación en tiempo real), configure los grupos externos que se usarán para la autenticación.</p>
+</li>
+</ol>
+<p><img alt="auth23" src="../Images/auth23.PNG" />
+<img alt="auth24" src="../Images/auth24.PNG" />
+-
+<strong>(Opcional) Configurar reglas de asignación de roles</strong></p>
+<p>Puede asignar automáticamente roles específicos a usuarios según sus atributos en AD:</p>
+<ul>
+<li><strong>Regla de coincidencia:</strong> Elija si el usuario debe cumplir UNA condición (OR) o TODAS (AND).</li>
+<li><strong>Filtros:</strong> Defina condiciones como "si el usuario pertenece al grupo X, asígnale el rol Y".</li>
+<li><strong>Delimitador:</strong> Si un usuario pertenece a múltiples grupos, puede asignarle múltiples roles.</li>
+</ul>
+<p><strong>Nota:</strong> Si los usuarios se sincronizan, los roles se asignan durante la sincronización. Si no se sincronizan, se asignan durante la autenticación. Los roles asignados manualmente tienen prioridad sobre los automáticos.</p>
+<h2 id="_2"><img alt="auth25" src="../Images/auth25.PNG" /><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>(Opcional) Configurar filtros de cuentas</strong></p>
+<p>Puede excluir o incluir OU específicas en la sincronización:
+*   <strong>Excluir OU específicas:</strong> No sincronizará usuarios de esas OU.
+*   <strong>Incluir solo OU específicas:</strong> Sincronizará ÚNICAMENTE usuarios de esas OU.</p>
+<h2 id="_3"><img alt="auth26" src="../Images/auth26.PNG" /><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>Sincronizar cuentas AD/LDAP</strong></p>
+<p>Una vez configurado todo:</p>
+<ul>
+<li><strong>Para sincronizar SOLO grupos:</strong> Seleccione la fuente de datos AD y haga clic en <strong>"Sincronizar Grupo de Usuarios"</strong>.</li>
+</ul>
+<p><img alt="auth27" src="../Images/auth27.PNG" /></p>
+<ul>
+<li><strong>Para sincronizar grupos y usuarios inmediatamente:</strong> Haga clic en el icono (ejecutar sincronización).</li>
+<li><img alt="auth28" src="../Images/auth28.PNG" /></li>
+</ul>
+<hr />
+<p><strong>Configurar reglas de autenticación para usar el AD</strong></p>
+<p>Para que los usuarios puedan autenticarse contra su AD:</p>
+<ol>
+<li>
+<p>Vaya a <code>Admission Management &gt; Admission Policy &gt; Authentication and Authorization &gt; Authentication Rule</code></p>
+</li>
+<li>
+<p>Cree o modifique una regla seleccionando:</p>
+<ul>
+<li><strong>Fuente de datos de autenticación:</strong> El servidor AD que acaba de configurar</li>
+<li><strong>Coincidir grupos de usuarios:</strong> Active y seleccione los grupos que tendrán acceso</li>
+</ul>
+</li>
+</ol>
+<p><img alt="auth29" src="../Images/auth29.PNG" />
+<img alt="auth30" src="../Images/auth30.PNG" /></p>
+<hr />
+<h2 id="fuentes-de-consulta">FUENTES DE CONSULTA<a class="headerlink" href="#fuentes-de-consulta" title="Permanent link">&para;</a></h2>
+<p>https://support.huawei.com/</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
