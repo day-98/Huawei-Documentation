@@ -15,7 +15,6 @@ theme:
     - navigation.indexes
     - navigation.sections
     - navigation.top
-    - navigation.instant
     - navigation.tracking
     
     # Búsqueda
@@ -81,27 +80,33 @@ nav:
   - Home: 'index.md'
 
   - General Information:
+    - 'General/index.md'
     - 'General/Ticket Creation.md'
     - 'General/Obtain ESN.md'
     - 'General/Commun Links.md'
+    - 'General/RFC_Upgrade_Process.md'
 
   - EASYSUITE:
     - 'Typical Doubts/EasySuite Typical Doubts.md'
 
   - NCE CAMPUS:
     - 'NCE Campus/NCE Campus Typical Doubts.md'
+    - 'NCE Campus/Health_Check.md'
+    - 'NCE Campus/Export_Device_List.md'
+    - 'NCE Campus/Configuring AD.md'
+    - 'NCE Campus/Configuring NCE as Radius Server.md'
 
   - eSIGHT:
-    - 'General/Ticket Creation.md'
-
+    - 'eSight/index.md'
+  
   - NCE FABRIC:
-    - 'General/Ticket Creation.md'
+    - 'NCE_Fabric/index.md'
 
   - NCE FABRIC INSIGHT:
-    - 'General/Ticket Creation.md'
+    - 'NCE_Fabric_Insight/index.md'
   
   - WAC:
-    - 'Switches/SNMPv3 Configuration.md'
+    - 'WACs/SNMPv3 Configuration.md'
 
   - Switches:
     - 'Switches/Initialization.md'

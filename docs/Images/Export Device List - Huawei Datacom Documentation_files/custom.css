@@ -1,0 +1,327 @@
+/* Header con color Huawei */
+.md-header {
+    background-color: rgb(199, 0, 11);
+}
+
+.md-header__brand img {
+    max-height: 50px;
+}
+
+/* ============================================
+   COLORES DE NAVEGACIÓN SUPERIOR (TABS)
+   ============================================ */
+
+/* Tabs de navegación superior - estado normal */
+.md-tabs__link {
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+}
+
+/* Tab activo - ROJO CLARO */
+.md-tabs__link--active {
+    color: #ffcdd2 !important;
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* Tab hover */
+.md-tabs__link:hover {
+    color: #ffcdd2;
+    opacity: 1;
+}
+
+/* Indicador inferior del tab activo */
+.md-tabs__item--active {
+    border-bottom: 2px solid #ffcdd2;
+}
+
+/* ============================================
+   REDUCIR ANCHO DE SIDEBAR Y AUMENTAR CONTENIDO
+   ============================================ */
+
+/* Reducir ancho de la sidebar izquierda */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+        width: 15rem;
+    }
+}
+
+/* Eliminar el TOC de la derecha para dar más espacio al contenido */
+@media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+        display: none;
+    }
+    
+    .md-content {
+        max-width: 100%;
+    }
+    
+    .md-content__inner {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: none;
+    }
+}
+
+/* Para pantallas muy grandes */
+@media screen and (min-width: 76.25em) {
+    .md-content__inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ============================================
+   OPTIMIZACIÓN DEL ESPACIADO INTERNO SIDEBAR
+   ============================================ */
+
+.md-nav {
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.md-nav__item {
+    padding: 0;
+}
+
+.md-nav__link {
+    padding: 0.4rem 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Reducir espaciado en items anidados */
+.md-nav--secondary .md-nav__link {
+    padding-left: 1.2rem;
+}
+
+.md-nav--secondary .md-nav .md-nav__link {
+    padding-left: 2rem;
+}
+
+.md-nav--secondary .md-nav .md-nav .md-nav__link {
+    padding-left: 2.8rem;
+}
+
+/* ============================================
+   ESTILO DE SECCIONES (CATEGORÍAS) - MODO CLARO
+   ============================================ */
+
+[data-md-color-scheme="default"] .md-nav__item--section > .md-nav__link {
+    display: block;
+    margin: 0.3rem 0;
+    padding: 0.4rem 0.8rem;
+    color: #e53935 !important;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: rgba(199, 0, 11, 0.1);
+    border-left: 3px solid #e53935;
+    border-radius: 4px;
+}
+
+/* Sección activa en tabs superiores - MODO CLARO */
+[data-md-color-scheme="default"] .md-nav--lifted>.md-nav__list > .md-nav__item--active > .md-nav__link:not(.md-nav__container) {
+    border-left: None;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: black !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--lifted>.md-nav__list > .md-nav__item--active > .md-nav__link:not(.md-nav__container):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0.8rem;
+    width: 40px;
+    height: 3px;
+    background: #e53935;
+}
+
+/* ============================================
+   ESTILO DE SECCIONES (CATEGORÍAS) - MODO OSCURO
+   ============================================ */
+
+[data-md-color-scheme="slate"] .md-nav__item--section > .md-nav__link {
+    display: block;
+    margin: 0.3rem 0;
+    padding: 0.4rem 0.8rem;
+    color: #ffcdd2 !important;  /* Rojo claro para dark mode */
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: rgba(255, 205, 210, 0.15);  /* Fondo rojo muy claro */
+    border-left: 3px solid #ffcdd2;
+    border-radius: 4px;
+}
+
+/* Sección activa en tabs superiores - MODO OSCURO */
+[data-md-color-scheme="slate"] .md-nav--lifted>.md-nav__list > .md-nav__item--active > .md-nav__link:not(.md-nav__container) {
+    border-left: None;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff !important;  /* Blanco para mejor contraste */
+}
+
+[data-md-color-scheme="slate"] .md-nav--lifted>.md-nav__list > .md-nav__item--active > .md-nav__link:not(.md-nav__container):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0.8rem;
+    width: 40px;
+    height: 3px;
+    background: #ffcdd2;  /* Rojo claro */
+}
+
+/* Links nested en modo oscuro */
+[data-md-color-scheme="slate"] .md-nav__item--nested > .md-nav__link {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.87);  /* Texto claro */
+}
+
+/* ============================================
+   OPTIMIZACIÓN DE LISTAS Y TÍTULOS
+   ============================================ */
+
+/* Eliminar títulos duplicados */
+.md-nav__item--section > .md-nav__list > .md-nav__item:first-child {
+    display: none;
+}
+
+.md-nav__list {
+    padding: 0;
+    margin: 0;
+}
+
+/* Modo claro - color por defecto */
+[data-md-color-scheme="default"] .md-nav__item--nested > .md-nav__link {
+    font-weight: 600;
+    color: #333;
+}
+
+/* ============================================
+   ITEM ACTIVO EN SIDEBAR
+   ============================================ */
+
+/* Modo claro */
+[data-md-color-scheme="default"] .md-nav__link--active {
+    color: #e53935 !important;
+    font-weight: 600;
+    background-color: rgba(229, 57, 53, 0.08);
+    border-radius: 4px;
+}
+
+[data-md-color-scheme="default"] .md-nav__link:hover {
+    background-color: rgba(229, 57, 53, 0.05);
+    border-radius: 4px;
+}
+
+/* Modo oscuro */
+[data-md-color-scheme="slate"] .md-nav__link--active {
+    color: #ffcdd2 !important;  /* Rojo claro */
+    font-weight: 600;
+    background-color: rgba(255, 205, 210, 0.15);
+    border-radius: 4px;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+    background-color: rgba(255, 205, 210, 0.1);
+    border-radius: 4px;
+    color: #ffcdd2;
+}
+
+/* Color de texto normal en sidebar - modo oscuro */
+[data-md-color-scheme="slate"] .md-nav__link {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+/* ============================================
+   OPTIMIZACIÓN DEL TOGGLE (EXPANDIR/COLAPSAR)
+   ============================================ */
+
+.md-nav__toggle ~ .md-nav__link .md-icon {
+    font-size: 1rem;
+}
+
+.md-nav__toggle {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* ============================================
+   SCROLLBAR PERSONALIZADA
+   ============================================ */
+
+/* Modo claro */
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 6px;
+}
+
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #e53935;
+    border-radius: 3px;
+}
+
+[data-md-color-scheme="default"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+    background: #c62828;
+}
+
+/* Modo oscuro */
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 6px;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #ffcdd2;
+    border-radius: 3px;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+    background: #ff8a95;
+}
+
+/* ============================================
+   MEJORAR LEGIBILIDAD DEL CONTENIDO
+   ============================================ */
+
+.md-typeset {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.md-typeset table:not([class]) {
+    width: 100%;
+}
+
+.md-typeset img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   ENLACES EN EL CONTENIDO
+   ============================================ */
+
+/* Modo claro */
+[data-md-color-scheme="default"] .md-typeset a {
+    color: #e53935;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+    color: #c62828;
+}
+
+/* Modo oscuro */
+[data-md-color-scheme="slate"] .md-typeset a {
+    color: #ffcdd2;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+    color: #ff8a95;
+}
