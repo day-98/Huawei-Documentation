@@ -1,15 +1,23 @@
-### Soporte Huawei 
+### **Soporte Huawei**
 Find Product and Solution Documentation--->[Link](https://support.huawei.com/enterprise/en/index.html)
 
-### EasyGet
+### **EasyGet**
 Download software packages-->[Link](https://info.support.huawei.com/comdev/easyget/#/software-package?lang=en)
 
-### ESDP
+### **ESDP**
 Manage License Resources-->[Link](https://esdp.huawei.com/sdp2/#/standingbookActive)
 
-### W3
+### **W3**
 Huawei Employee Web Page-->[Link](https://w3.huawei.com/next/indexa.html)
 
 
-### O3 Community
+### **O3 Community**
 Huawei Community-->[Link](https://sg.o3community.huawei.com/sg/en/index/1783684860314767362)
+
+
+### **ICS Lite**
+Download Application--->[Link](https://support.huawei.com/enterprise/en/bulletins-website/ENEWS2000010769)
+
+
+### **Portapapeles Encriptado**
+Download Application--->[Link](https://clipperz.is/)
