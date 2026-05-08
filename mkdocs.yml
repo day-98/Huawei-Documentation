@@ -96,6 +96,8 @@ nav:
     - 'NCE Campus/Export_Device_List.md'
     - 'NCE Campus/Configuring AD.md'
     - 'NCE Campus/Configuring NCE as Radius Server.md'
+    - 'NCE Campus/Import Licenses Files.md'
+    - 'NCE Campus/Device Upgrade.md'
 
   - eSIGHT:
     - 'eSight/index.md'
